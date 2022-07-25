@@ -1,0 +1,23 @@
+{
+  "name": "shoppingify-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nasah-Kuma/Shoppingify-service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nasah-Kuma/Shoppingify-service/issues"
+  },
+  "homepage": "https://github.com/Nasah-Kuma/Shoppingify-service#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.6"
+  }
+}
