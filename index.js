@@ -2,6 +2,7 @@ const express = require('express');
 const mongoDbUrl = require('./src/configs/database.config.js');
 const mongoose = require('mongoose');
 const categoryRouter = require('./src/routes/category.routes.js');
+const userRouter = require('./src/routes/userRoute.js');
 
 const app = express();
 
@@ -10,15 +11,10 @@ app.use(express.json());
 
 mongoose.connect(mongoDbUrl.url, {useNewUrlParser: true});
 const con = mongoose.connection;
-// try {
-//     con.on('open', () => {
-//         console.log('connected');
-//     })
-// }catch(error) {
-//     console.log('error', error)
-// }
+
 
 app.use('/category', categoryRouter);
+app.use('/user', userRouter);
 
 
 const PORT = 4500;
