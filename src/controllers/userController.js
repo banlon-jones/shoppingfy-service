@@ -33,7 +33,13 @@ exports.login = async (req, res) => {
           name: user.name,
           email: user.email
         }, JWT_ENCRYPTION.key);
-         res.status(200).json(token)
+        
+         res.status(200).json({
+          id: user._id,
+          name: user.name,
+          email: user.email,
+          accessToken: token
+         });
       }
     }
   })
