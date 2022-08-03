@@ -27,7 +27,7 @@ app.use('/user', userRouter);
 app.use('/items', itemRouter);
 app.use('/shopping-list', shoppingListRouter);
 
-const PORT = 4500;
+const PORT = process.env.PORT || 4500;
 app.listen(PORT, () => {
     console.log(`Server started on ${PORT}`);
 });
