@@ -9,13 +9,14 @@ const cors = require("cors");
 const authMiddleware = require("./src/middlewares/authJwt");
 const app = express();
 
-let corsOptions = {
-    origin: "*"
-};
+// let corsOptions = {
+//     origin: [ 'http://localhost:5500', 'http://localhost:3000', '*' ],
+// };
+
+app.use(cors());
 
 app.use(authMiddleware.verifyToken);
 
-app.use(cors(corsOptions));
 // parse json object
 app.use(express.json());
 
